@@ -1,0 +1,16 @@
+.navbar {
+    grid-area: n;
+    background-color: rgb(190, 190, 190);
+    color: black ;
+    padding: 20px;
+  }
+
+
+.nbm a {
+     color: whitesmoke ;
+    text-decoration: none;
+   }
+
+ a.active {
+    color: beige ;
+  }

@@ -1,0 +1,23 @@
+.header {
+    grid-area: h;
+    background-color: rgb(190, 190, 190);
+  }
+  .header_img {
+    width: 100px;
+    height: 40px;
+    
+  }
+
+ .hd {
+   text-align: center;
+   vertical-align: top;
+   color: white;
+   font-style: italic;
+ }
+ 
+ .loginBlock {
+   float: right;
+ } 
+ .loginBlock a {
+  color:white;
+ }

@@ -1,0 +1,14 @@
+
+  .item {
+    color: green;
+  }
+
+  .ava {
+    font-size: 20px;
+    font-style: italic;
+    color: whitesmoke;
+  }
+  .profile_img {
+    width: auto;
+    border-bottom: 5px;
+  }

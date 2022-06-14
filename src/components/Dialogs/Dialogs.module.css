@@ -1,0 +1,59 @@
+.dialogs{
+display: grid;
+
+    grid-template-columns: 2fr 10fr;
+    text-decoration: none
+}
+
+.dialogItems .dialog {
+    color: white;
+    text-decoration: none;
+}
+.btnSend {
+    position: center;
+    width: 30px;
+    height: 40px;
+    padding: 0px 140px 50px 190px;
+}
+.textarea {
+
+    width: 140px;
+    height: 40px;
+    padding: 10px 140px 5px 140px;
+}
+
+.dialogItems a {
+    color: black;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 10px;
+}
+
+.messages .message {
+    color: black;
+    text-align: center;
+    /*text-decoration: underline;*/
+    /*letter-spacing: 1px;*/
+    padding: 1px;
+
+
+}
+.active {
+    color: white;
+    text-decoration:  none;
+}
+.sendButton {
+    border-radius: 15px;
+    background-color: #3e3aff;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 10px;
+    padding: 10px;
+    width: 80px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+
+}
