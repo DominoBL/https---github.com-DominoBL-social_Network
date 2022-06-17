@@ -9,7 +9,7 @@ import Users from "./Users";
 import Preloader from "../Preloader/Preloader";
 import {withAuthRedirect} from "../HOC/withAuthRedirect"
 import { compose } from "redux";
-import { getCurrentPage, getFollowingInProgress, getIsAuth, getIsFetching, getPageSize, getTotalUsersCount, getUsers } from "../../Redux/userSelectors";
+import { getCurrentPage, getFollowingInProgress, getIsAuth, getIsFetching, getPageSize, getTotalUsersCount, getUsers, getUsersSelector, getUsersSuperSelector } from "../../Redux/userSelectors";
 
 class UsersContainer extends React.Component {
     componentDidMount() {
@@ -21,9 +21,6 @@ class UsersContainer extends React.Component {
     }
 
     render() {
-
-        // if (!this.props.isAuth) return <Redirect to={"/login"} />;
-
         return <>
             {this.props.isFetching ?
                 <Preloader/> : null}
@@ -45,6 +42,7 @@ class UsersContainer extends React.Component {
 
 let mapStateToProps = (state) => {
     return {
+        // users: getUsers(state),
         users: getUsers(state),
         pageSize: getPageSize(state),
         totalUsersCount: getTotalUsersCount(state),

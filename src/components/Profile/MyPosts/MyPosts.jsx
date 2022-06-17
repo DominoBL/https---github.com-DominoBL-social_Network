@@ -8,11 +8,20 @@ import { maxLengthCreator, required } from '../../../utils/validators/validators
 const maxLength10 =  maxLengthCreator(10)
 
 
-const MyPosts = (props) => {
+const MyPosts = React.memo(props => {
 
-    let postsElements = props.posts.map(posts => <Post posts={posts.post} likesCount={posts.likesCount}/>);
-    // let newPostElement = React.createRef();
+    // componentDidMount() {
+    //     setTimeout( () =>
+    //     this.setState({a:12}),3000)
+    // }
 
+    // shouldComponentUpdate(nextProps, nextState) {                 //PureComponent делает эту проверку
+    //     return nextProps != this.props || nextState != this.state
+    // }
+
+    console.log("yo")
+    let postsElements = props.posts.map(posts=> <Post posts={posts.post} likesCount={posts.likesCount} /> ) ;
+    let newPostElement = React.createRef();
     let addNewPost = (values) => {
         props.addPost(values.newPostText);
     }
@@ -29,7 +38,7 @@ const MyPosts = (props) => {
             </div>
         </div>)
 }
-
+)
 
 
 

@@ -7,6 +7,7 @@ let initialState =    {
         {id: 2, message: 'I`m good enough'},
         {id: 3, message: 'Nice'},
         {id: 4, message: 'You are welcome'},
+        // {id: 5, message: 'You are welcome'},
     ],
     dialogs: [
         {id: 0, name: 'Ravil'},

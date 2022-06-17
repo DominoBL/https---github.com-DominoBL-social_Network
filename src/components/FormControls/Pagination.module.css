@@ -1,0 +1,12 @@
+.selectedPage {
+    border-radius: 10px;
+    background-color: #3e3aff;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 12px;
+    padding: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 10px;
+}
