@@ -4,8 +4,6 @@ import React from "react";
 import {NavLink} from "react-router-dom";
 
 
-
-
 const User = ({user, followingInProgress, unfollow, follow}) => {
     return (
         <div >

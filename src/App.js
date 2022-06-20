@@ -1,9 +1,9 @@
 
 import './App.css';
-import React, { Component } from "react";
+import React, { Component, Suspense } from "react";
 import HeaderContainer from './components/Header/HeaderContainer';
 import Navbar from './components/Navbar/Navbar';
-import DialogsContainer from "./components/Dialogs/DialogsContainer";
+// import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import {
@@ -20,6 +20,10 @@ import {withRouter} from "react-router-dom";
 import Preloader from './components/Preloader/Preloader';
 
 
+
+const DialogsContainer = React.lazy(() => import("./components/Dialogs/DialogsContainer"));
+
+
 class App extends Component {
 
     componentDidMount() {
@@ -27,12 +31,13 @@ class App extends Component {
     }
 
     render() {
-        // debugger
+
         if (!this.props.initialized) {
         return <Preloader/>
         }
+
     return (
-        
+        <Suspense fallback={<Preloader/>}>
             <div className='app-wrapper'>
                 <HeaderContainer/>
                 <Navbar/>
@@ -47,7 +52,7 @@ class App extends Component {
                     
                 </div>
             </div>
-            
+            </Suspense>
             );
 }
 }
