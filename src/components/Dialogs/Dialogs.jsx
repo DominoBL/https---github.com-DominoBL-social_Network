@@ -1,8 +1,8 @@
 import s from './Dialogs.module.css';
 import {NavLink} from "react-router-dom";
 import { Field, reduxForm } from 'redux-form';
-import { Textarea } from '../FormControls/FormsControls';
-import { maxLengthCreator, required } from '../../utils/validators/validators';
+import { Textarea } from '../FormControls/FormsControls.tsx';
+import { maxLengthCreator, required } from '../../utils/validators/validators.ts';
 // import { Redirect } from 'react-router';
 
 const DialogItem = (props) => {

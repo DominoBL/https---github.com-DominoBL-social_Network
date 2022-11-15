@@ -6,15 +6,12 @@ import Navbar from './components/Navbar/Navbar';
 // import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
-import {
-    BrowserRouter as Router,
-    Route,
-} from "react-router-dom";
-import UsersContainer from "./components/Users/UsersContainer";
-import ProfileContainer from "./components/Profile/ProfileContainer";
-import LoginPage from './components/Login/Login';
+import { Route} from "react-router-dom";
+import UsersContainer from "./components/Users/UsersContainer.tsx";
+import ProfileContainer from "./components/Profile/ProfileContainer.tsx";
+import LoginPage from './components/Login/Login.tsx';
 import { connect } from 'react-redux';
-import { initializeApp} from './Redux/appReducer';
+import { initializeApp} from './Redux/appReducer.ts';
 import { compose } from 'redux';
 import {withRouter} from "react-router-dom";
 import Preloader from './components/Preloader/Preloader';
@@ -47,8 +44,9 @@ class App extends Component {
                         <Route path='/profile/:userId?' render={() => <ProfileContainer/>}/>
                         <Route path='/news' render={() => <News/>}/>
                         <Route path='/music' render={() => <Music/>}/>
-                        <Route path='/users' render={() => <UsersContainer/>}/>
+                        <Route path='/users' render={() => <UsersContainer pageTitle={"Пользователи"}/>}/>
                         <Route path='/login' render={() => <LoginPage/>}/>
+                        {/* <Route path='*' render={() => <div>404 NOT FOUND</div>}/> */}
                     
                 </div>
             </div>

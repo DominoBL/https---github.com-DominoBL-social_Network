@@ -3,7 +3,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ReactDOM from 'react-dom';
-import store from "./Redux/redux-store";
+import store from "./Redux/redux-store.ts";
 import {Provider} from "react-redux";
 import {BrowserRouter as Router} from "react-router-dom";
 
@@ -13,9 +13,7 @@ import {BrowserRouter as Router} from "react-router-dom";
         <React.StrictMode>
             <Router>
             <Provider store={store}>
-            
-            <App />
-           
+            <App /> 
             </Provider>
             </Router>
         </React.StrictMode>,
